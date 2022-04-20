@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "MetaSeo",
+    "description": "Displays all meta data and main SEO information",
+    "version": "1.0",
+    "icons": {
+        "16": "img/icon16.png",
+        "48": "img/icon48.png",
+        "128": "img/icon128.png"
+    },
+    "minimum_chrome_version": "16.0.884",
+    "permissions": ["webNavigation", "tabs", "\u003Call_urls\u003E", "cookies", "contextMenus", "notifications", "clipboardWrite", "webRequest", "webRequestBlocking", "activeTab", "storage", "https://*.*.*/*"],
+    "browser_action": {
+        "default_icon": "img/icon128.png",
+        "default_popup": "popup.html"
+    },
+    "manifest_version": 2,
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
+}
